@@ -4,23 +4,20 @@ contoh untuk isi router.jsx:
 
 import Homepage from "../views/Homepage";
 import Register from "../views/Register";
-import Register from "../views/Login";
 ... (tambah sendiri)
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Homepage />
+    element: <Layout />,  // Wrap routes inside Layout
+    children: [
+      {
+        path: "/", 
+        element: <Dashboard />
+      },
+      {
+        // Add other routes here if needed ...
+      },
+    ],
   },
-  {
-    path: "/register",
-    element: <register />,
-  },
-  {
-    path: "/login",
-    element: <login />,
-  },
-  {
-    ... (tambah sendiri)
-  },
-])
+])  
