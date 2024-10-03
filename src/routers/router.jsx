@@ -9,7 +9,7 @@ import Product from "../views/Product";
 import ListPage from "../views/ListPage";
 import Categories from "../views/Categories";
 import AddProduct from "../views/AddProduct";
-import TheCategory from "../views/theCategory";
+import TheCategory from "../views/TheCategory";
 import WatchList from "../views/Watchlist";
 import SellPage from "../views/SellPage";
 import Register from "../components/auth/register";
