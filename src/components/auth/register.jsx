@@ -85,7 +85,7 @@ function Register() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/users",
+        "https://json-server-flax-six.vercel.app/users",
         formData
       );
       toast.success(response.data.message || "Registrasi Berhasil");

@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import axios from "axios";
 
-export const API_URL = "http://localhost:5000";
+export const API_URL = "https://json-server-flax-six.vercel.app";
 
 const getUsers = () => {
   return axios.get(`${API_URL}/users`);

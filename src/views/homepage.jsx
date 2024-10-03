@@ -130,7 +130,7 @@ function homepage() {
   // To fetch data to item cards section of 'recent open listing'
   const [auctions, setAuctions] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3000/auctions")
+    fetch("https://json-server-flax-six.vercel.app/auctions")
       .then((response) => response.json())
       .then((data) => {
         // Limit to 6 items

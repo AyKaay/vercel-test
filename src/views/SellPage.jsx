@@ -64,7 +64,7 @@ const SellPage = () => {
     };
 
     axios
-      .post("http://localhost:5000/auctions", newAuction)
+      .post("https://json-server-flax-six.vercel.app/auctions", newAuction)
       .then((response) => {
         console.log("Auction created successfully!", response.data);
 

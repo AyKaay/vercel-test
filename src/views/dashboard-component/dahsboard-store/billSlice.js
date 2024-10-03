@@ -4,7 +4,7 @@ import axios from "axios";
 
 export const getBill = createAsyncThunk("bill/getBill", async (_, thunkAPI) => {
   try {
-    const response = await axios.get("http://localhost:2000/bill-history");
+    const response = await axios.get("https://json-server-flax-six.vercel.app/bill-history");
     const billHistory = response.data;
     const saldo = response.data[0].finalBalance;
     let totalBid = 0;

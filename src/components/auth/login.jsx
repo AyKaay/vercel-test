@@ -28,7 +28,7 @@ function Login() {
     e.preventDefault();
     try {
       const response = await axios.get(
-        `http://localhost:5000/users?email=${formData.email}&password=${formData.password}`
+        `https://json-server-flax-six.vercel.app/users?email=${formData.email}&password=${formData.password}`
       );
 
       if (response.data.length > 0) {
@@ -36,8 +36,8 @@ function Login() {
 
         localStorage.setItem("userId", response.data[0].id);
         localStorage.setItem("logged", formData.email);
-        // Post ke localhost:5000/logged
-        await axios.post("http://localhost:5000/logged", {
+
+        await axios.post("https://json-server-flax-six.vercel.app/logged", {
           email: formData.email,
           password: formData.password,
         });

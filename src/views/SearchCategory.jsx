@@ -8,7 +8,7 @@ export default function SearchCategory() {
 
     // Filter auctions based on the URL params (item category only)
     useEffect(() => {
-        fetch('http://localhost:3000/auctions') // TODO CHANGE LATER
+        fetch('https://json-server-flax-six.vercel.app/auctions') // TODO CHANGE LATER
             .then(response => response.json())
             .then(data => {
                 const filtered = data.filter(auction => auction.category.toLowerCase() === keyword.toLowerCase());
